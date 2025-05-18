@@ -1,126 +1,169 @@
 <template>
   <div>
     <!-- Hero Section with Names -->
-    <section v-motion="{ initial: { opacity: 0, y: 32 }, enter: { opacity: 1, y: 0, transition: { duration: 1 } } }" class="py-12 md:py-20 bg-beige rounded-xl shadow-lg border-4 border-gold mx-auto max-w-3xl mt-6 mb-8 text-center">
-      <h1 class="text-xl md:text-2xl text-burgundy font-secondary mb-2 tracking-widest">Welcome to the wedding reception of</h1>
-      <div v-motion="{ initial: { opacity: 0, scale: 0.8 }, enter: { opacity: 1, scale: 1, transition: { delay: 0.3, duration: 0.7 } } }" class="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-6 mb-6">
-        <span class="text-4xl md:text-6xl font-primary text-gold">Fawad</span>
+    <section 
+      v-motion="{ initial: { opacity: 0 }, enter: { opacity: 1, transition: { duration: 1200 } } }" 
+      class="py-16 md:py-24 bg-cream/90 rounded-xl shadow-elegant border-2 border-gold/60 mx-auto max-w-4xl mt-8 mb-10 text-center relative overflow-hidden"
+    >
+      <!-- Ornate corner elements -->
+      <div class="absolute top-0 left-0 w-16 h-16 opacity-20" v-motion="{ initial: { opacity: 0, scale: 0.7 }, enter: { opacity: 0.2, scale: 1, transition: { duration: 800 } } }">
+        <img src="/img/corner-ornament.png" alt="" class="w-full h-full" />
+      </div>
+      
+      <div class="absolute top-0 right-0 w-16 h-16 opacity-20" v-motion="{ initial: { opacity: 0, scale: 0.7 }, enter: { opacity: 0.2, scale: 1, transition: { duration: 800 } } }">
+        <img src="/img/corner-ornament.png" alt="" class="w-full h-full transform rotate-90" />
+      </div>
+      
+      <div class="absolute bottom-0 right-0 w-16 h-16 opacity-20" v-motion="{ initial: { opacity: 0, scale: 0.7 }, enter: { opacity: 0.2, scale: 1, transition: { duration: 800 } } }">
+        <img src="/img/corner-ornament.png" alt="" class="w-full h-full transform rotate-180" />
+      </div>
+      
+      <div class="absolute bottom-0 left-0 w-16 h-16 opacity-20" v-motion="{ initial: { opacity: 0, scale: 0.7 }, enter: { opacity: 0.2, scale: 1, transition: { duration: 800 } } }">
+        <img src="/img/corner-ornament.png" alt="" class="w-full h-full transform rotate-270" />
+      </div>
+      
+      <h1 
+        class="text-xl md:text-2xl text-burgundy font-secondary mb-6 tracking-widest"
+        v-motion="{ initial: { opacity: 0, y: -10 }, enter: { opacity: 1, y: 0, transition: { delay: 300, duration: 700 } } }"
+      >
+        Together with their families
+      </h1>
+      
+      <div 
+        v-motion="{ initial: { opacity: 0, scale: 0.9 }, enter: { opacity: 1, scale: 1, transition: { delay: 500, duration: 900 } } }" 
+        class="flex flex-col justify-center items-center gap-3 mb-5"
+      >
+        <span class="text-4xl md:text-7xl font-decorative text-gold leading-tight">Fawad Mohyuddin</span>
+        <div class="text-burgundy font-secondary text-sm md:text-base tracking-wide mb-2">Son of Tahira Jabeen Mohyuddin & late Ghulam Mohyuddin</div>
+        
         <span class="text-3xl md:text-5xl font-secondary text-burgundy">&</span>
-        <span class="text-4xl md:text-6xl font-primary text-gold">Nimrah</span>
+        
+        <span class="text-4xl md:text-7xl font-decorative text-gold leading-tight mt-2">Nimrah Khan</span>
+        <div class="text-burgundy font-secondary text-sm md:text-base tracking-wide">Daughter of Muhammad Tahir & Roohi Tahir</div>
       </div>
-      <!-- Countdown Timer -->
-      <div v-motion="{ initial: { opacity: 0, y: 24 }, enter: { opacity: 1, y: 0, transition: { delay: 0.6, duration: 0.7 } } }" class="flex flex-col items-center mb-6">
-        <div class="text-lg text-burgundy font-semibold mb-1">Join us on:</div>
-        <div class="text-xl text-gold font-secondary mb-4">October 11, 2025 at 17:00</div>
-        <div class="flex gap-4 md:gap-8">
-          <div class="flex flex-col items-center">
-            <div class="text-3xl md:text-4xl font-bold text-burgundy">{{ countdown.days }}</div>
-            <div class="text-xs md:text-sm text-burgundy">Days</div>
-          </div>
-          <div class="flex flex-col items-center">
-            <div class="text-3xl md:text-4xl font-bold text-burgundy">{{ countdown.hours }}</div>
-            <div class="text-xs md:text-sm text-burgundy">Hours</div>
-          </div>
-          <div class="flex flex-col items-center">
-            <div class="text-3xl md:text-4xl font-bold text-burgundy">{{ countdown.minutes }}</div>
-            <div class="text-xs md:text-sm text-burgundy">Minutes</div>
-          </div>
-          <div class="flex flex-col items-center">
-            <div class="text-3xl md:text-4xl font-bold text-burgundy">{{ countdown.seconds }}</div>
-            <div class="text-xs md:text-sm text-burgundy">Seconds</div>
-          </div>
-        </div>
+      
+      <div 
+        class="text-xl md:text-2xl text-burgundy font-secondary mb-8 tracking-wide"
+        v-motion="{ initial: { opacity: 0 }, enter: { opacity: 1, transition: { delay: 700, duration: 700 } } }"
+      >
+        Request the pleasure of your company at their wedding reception
       </div>
-      <div v-motion="{ initial: { opacity: 0, y: 12 }, enter: { opacity: 1, y: 0, transition: { delay: 1, duration: 0.6 } } }" class="mt-6">
-        <NuxtLink to="/rsvp" class="inline-block px-8 py-3 bg-burgundy text-beige font-secondary text-lg rounded-full shadow-lg hover:bg-gold hover:text-black transition">RSVP Now</NuxtLink>
+      
+      <!-- Countdown Timer Component -->
+      <div v-motion="{ initial: { opacity: 0, y: 20 }, enter: { opacity: 1, y: 0, transition: { delay: 900, duration: 700 } } }">
+        <CountdownTimer />
+      </div>
+      
+      <div 
+        v-motion="{ initial: { opacity: 0, y: 12 }, enter: { opacity: 1, y: 0, transition: { delay: 1100, duration: 600 } } }" 
+        class="mt-8"
+      >
+        <a 
+          href="#rsvp" 
+          class="inline-block px-10 py-3 bg-burgundy text-beige font-secondary text-lg rounded-full shadow-elegant hover:bg-gold hover:text-burgundy transition-all duration-300 border border-gold/40 hover:shadow-gold-glow"
+          @click.prevent="scrollToRsvp"
+        >
+          RSVP Now
+        </a>
       </div>
     </section>
 
-    <!-- Decorative Pattern -->
-    <div class="w-full h-8 bg-repeat-x my-6" style="background-image: url('/img/nikahnama-pattern.png')"></div>
-
-    <!-- Wedding Information Section -->
-    <section v-motion="{ initial: { opacity: 0, y: 32 }, enter: { opacity: 1, y: 0, transition: { delay: 0.5, duration: 0.8 } } }" class="section max-w-4xl mx-auto bg-beige bg-opacity-90 rounded-xl border-2 border-gold shadow-md px-4 py-8">
-      <h2 class="section-title text-2xl md:text-3xl font-secondary text-burgundy mb-8">Wedding Information</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Venue Card -->
-        <div v-motion="{ initial: { opacity: 0, y: 24 }, enter: { opacity: 1, y: 0, transition: { delay: 0.7, duration: 0.6 } } }" class="info-card bg-white/80 border border-gold rounded-lg p-6 text-center shadow hover:shadow-lg transition">
-          <div class="text-3xl mb-2">📍</div>
-          <h3 class="text-lg font-secondary text-burgundy mb-1">Venue</h3>
-          <p class="text-black">Grand Celebration Hall</p>
-          <p class="text-black">123 Wedding Avenue</p>
-          <p class="text-black">Amsterdam, Netherlands</p>
-          <a href="https://maps.google.com" target="_blank" class="inline-block mt-2 px-4 py-1 bg-gold text-black rounded-full text-sm font-medium shadow hover:bg-burgundy hover:text-beige transition">View Map</a>
-        </div>
-        
-        <!-- Parking Card -->
-        <div v-motion="{ initial: { opacity: 0, y: 24 }, enter: { opacity: 1, y: 0, transition: { delay: 0.8, duration: 0.6 } } }" class="info-card bg-white/80 border border-gold rounded-lg p-6 text-center shadow hover:shadow-lg transition">
-          <div class="text-3xl mb-2">🅿️</div>
-          <h3 class="text-lg font-secondary text-burgundy mb-1">Parking</h3>
-          <p class="text-black">Free parking available on-site</p>
-          <p class="text-black">Additional parking at City Garage</p>
-          <p class="text-black">2 blocks away, $10 flat rate</p>
-        </div>
-        
-        <!-- Schedule Card -->
-        <div v-motion="{ initial: { opacity: 0, y: 24 }, enter: { opacity: 1, y: 0, transition: { delay: 0.9, duration: 0.6 } } }" class="info-card bg-white/80 border border-gold rounded-lg p-6 text-center shadow hover:shadow-lg transition">
-          <div class="text-3xl mb-2">🕒</div>
-          <h3 class="text-lg font-secondary text-burgundy mb-1">Schedule</h3>
-          <p class="text-black">5:00 PM - Arrival & Welcome</p>
-          <p class="text-black">6:00 PM - Dinner Service</p>
-          <p class="text-black">8:00 PM - Festivities</p>
-          <p class="text-black">11:00 PM - Conclusion</p>
-        </div>
+    <!-- Decorative Divider -->
+    <div class="w-full flex items-center justify-center my-10">
+      <div class="w-72 h-8 opacity-40" v-motion="{ initial: { opacity: 0, scale: 0.9 }, enter: { opacity: 0.4, scale: 1, transition: { duration: 800 } } }">
+        <img src="/img/ornate-divider.png" alt="" class="w-full h-full" />
       </div>
-    </section>
+    </div>
+
+    <!-- Wedding Information Section Component -->
+    <div v-scroll-animate>
+      <InfoCards />
+    </div>
+    
+    <!-- Decorative Divider -->
+    <div class="w-full flex items-center justify-center my-10">
+      <div class="w-72 h-8 opacity-40" v-motion="{ initial: { opacity: 0, scale: 0.9 }, enter: { opacity: 0.4, scale: 1, transition: { duration: 800 } } }">
+        <img src="/img/ornate-divider.png" alt="" class="w-full h-full" />
+      </div>
+    </div>
+    
+    <!-- RSVP Section -->
+    <div 
+      v-scroll-animate="{ 
+        initial: { opacity: 0, y: 60 }, 
+        visible: { opacity: 1, y: 0, transition: { duration: 1000, damping: 20 } } 
+      }"
+      class="my-10"
+    >
+      <RsvpForm />
+    </div>
+    
+    <!-- Back to Top Button -->
+    <div 
+      v-show="showBackToTop" 
+      class="fixed bottom-8 right-8 z-50 transition-all duration-500"
+      :class="{ 'opacity-0 translate-y-10': !showBackToTop, 'opacity-100 translate-y-0': showBackToTop }"
+    >
+      <button 
+        @click="scrollToTop" 
+        class="w-14 h-14 rounded-full bg-burgundy text-gold flex items-center justify-center shadow-elegant hover:bg-gold hover:text-burgundy transition-all duration-300 border-2 border-gold/50 hover:shadow-gold-glow"
+        aria-label="Back to top"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+        </svg>
+      </button>
+    </div>
   </div>
 </template>
 
 <script setup>
-import { ref, onBeforeMount, onBeforeUnmount } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
+import CountdownTimer from '~/components/CountdownTimer.vue';
+import InfoCards from '~/components/InfoCards.vue';
+import RsvpForm from '~/components/RsvpForm.vue';
 
-// Wedding date - October 11, 2025 at 17:00
-const weddingDate = new Date(2025, 9, 11, 17, 0, 0);
-const countdown = ref({
-  days: 0,
-  hours: 0,
-  minutes: 0,
-  seconds: 0
-});
+// Back to top button visibility
+const showBackToTop = ref(false);
 
-// Update countdown every second
-let countdownInterval;
+// Scroll event handler
+const handleScroll = () => {
+  // Show back to top button when scrolled down more than 500px
+  showBackToTop.value = window.scrollY > 500;
+};
 
-const updateCountdown = () => {
-  const now = new Date();
-  const difference = weddingDate.getTime() - now.getTime();
-  
-  if (difference > 0) {
-    countdown.value.days = Math.floor(difference / (1000 * 60 * 60 * 24));
-    countdown.value.hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    countdown.value.minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-    countdown.value.seconds = Math.floor((difference % (1000 * 60)) / 1000);
-  } else {
-    // Wedding day has arrived
-    countdown.value = { days: 0, hours: 0, minutes: 0, seconds: 0 };
+// Scroll to RSVP section
+const scrollToRsvp = () => {
+  const rsvpElement = document.getElementById('rsvp');
+  if (rsvpElement) {
+    rsvpElement.scrollIntoView({ behavior: 'smooth' });
   }
 };
 
-onBeforeMount(() => {
-  // Initial update
-  updateCountdown();
-  
-  // Set up interval
-  countdownInterval = setInterval(updateCountdown, 1000);
+// Scroll to top function
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+};
+
+onMounted(() => {
+  // Add scroll event listener
+  window.addEventListener('scroll', handleScroll);
 });
 
-onBeforeUnmount(() => {
-  // Clear interval when component is unmounted
-  if (countdownInterval) {
-    clearInterval(countdownInterval);
-  }
+onUnmounted(() => {
+  // Remove scroll event listener
+  window.removeEventListener('scroll', handleScroll);
 });
 </script>
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+</style>
 
 <style scoped>
 .home-page {

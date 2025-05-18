@@ -11,14 +11,31 @@ export default {
   theme: {
     extend: {
       colors: {
-        beige: '#f5f5dc',
-        burgundy: '#800020',
-        gold: '#d4af37',
-        black: '#222222',
+        beige: '#f7f3e8',
+        cream: '#f9f6f0',
+        burgundy: '#5c0819',
+        darkBurgundy: '#4a0614',
+        gold: '#c6a964',
+        brightGold: '#d4b872',
+        darkGold: '#aa8e4a',
+        black: '#1a1a1a',
       },
       fontFamily: {
         primary: ['Amiri', 'serif'],
         secondary: ['Playfair Display', 'serif'],
+        decorative: ['Pinyon Script', 'cursive'],
+      },
+      backgroundImage: {
+        'ornate-pattern': "url('/img/ornate-pattern.png')",
+        'corner-ornament': "url('/img/corner-ornament.png')",
+        'gold-border': "url('/img/gold-border.png')"
+      },
+      boxShadow: {
+        'elegant': '0 4px 20px rgba(0, 0, 0, 0.15)',
+        'gold-glow': '0 0 15px rgba(198, 169, 100, 0.4)'
+      },
+      animation: {
+        'spin-slow': 'spin 120s linear infinite',
       }
     },
   },
