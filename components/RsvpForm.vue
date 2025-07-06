@@ -224,7 +224,12 @@
               <option value="2">2 people</option>
               <option value="3">3 people</option>
               <option value="4">4 people</option>
-              <option value="5">5+ people</option>
+              <option value="5">5 people</option>
+              <option value="6">6 people</option>
+              <option value="7">7 people</option>
+              <option value="8">8 people</option>
+              <option value="9">9 people</option>
+              <option value="10">10 people</option>
             </select>
             <div class="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none text-gold">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -248,7 +253,12 @@
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
-              <option value="4">4+</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+
             </select>
             <div class="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none text-gold">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
