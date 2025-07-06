@@ -21,17 +21,17 @@
           enter: { opacity: 1, y: 0, transition: { duration: 600 } }
         }"
       >
-        <!-- Ornate corner elements -->
-        <div class="absolute top-0 left-0 w-10 h-10 opacity-1">
+        <!-- Ornate corner elements using corner.png - using CountdownTimer implementation -->
+        <div class="absolute top-0 left-0 w-10 h-10 opacity-100">
           <CornerImage :rotation="90" />
         </div>
-        <div class="absolute top-0 right-0 w-10 h-10 opacity-1">
+        <div class="absolute top-0 right-0 w-10 h-10 opacity-100">
           <CornerImage :rotation="180" />
         </div>
-        <div class="absolute bottom-0 left-0 w-10 h-10 opacity-1">
+        <div class="absolute bottom-0 left-0 w-10 h-10 opacity-100">
           <CornerImage :rotation="0" />
         </div>
-        <div class="absolute bottom-0 right-0 w-10 h-10 opacity-1">
+        <div class="absolute bottom-0 right-0 w-10 h-10 opacity-100">
           <CornerImage :rotation="-90" />
         </div>
         
@@ -72,17 +72,17 @@
           enter: { opacity: 1, y: 0, transition: { duration: 600, delay: 150 } }
         }"
       >
-        <!-- Ornate corner elements -->
-        <div class="absolute top-0 left-0 w-10 h-10 opacity-1">
+        <!-- Ornate corner elements using corner.png - using CountdownTimer implementation -->
+        <div class="absolute top-0 left-0 w-10 h-10 opacity-100">
           <CornerImage :rotation="90" />
         </div>
-        <div class="absolute top-0 right-0 w-10 h-10 opacity-1">
+        <div class="absolute top-0 right-0 w-10 h-10 opacity-100">
           <CornerImage :rotation="180" />
         </div>
-        <div class="absolute bottom-0 left-0 w-10 h-10 opacity-1">
+        <div class="absolute bottom-0 left-0 w-10 h-10 opacity-100">
           <CornerImage :rotation="0" />
         </div>
-        <div class="absolute bottom-0 right-0 w-10 h-10 opacity-1">
+        <div class="absolute bottom-0 right-0 w-10 h-10 opacity-100">
           <CornerImage :rotation="-90" />
         </div>
         
@@ -99,12 +99,8 @@
         
         <h3 class="text-lg sm:text-xl font-secondary text-burgundy mb-2 sm:mb-3 islamic-text-shadow">Parking</h3>
         <div class="space-y-1 text-black mb-3 sm:mb-4 text-sm sm:text-base enhanced-text">
-          <p>Free parking</p>
-          <p>on-site</p>
-          <br>
-          
+          <p>Free parking available on-site</p>
         </div>
-  
         
         <button 
           @click="openParkingModal = true"
@@ -117,14 +113,39 @@
     </div>
   </div>
 </div>
-  
-  <!-- Use the new ParkingModal component -->
-  <ParkingModal :show="openParkingModal" @close="openParkingModal = false" />
+  <!-- Parking Map Modal -->
+  <div v-if="openParkingModal" class="fixed inset-0 flex items-center justify-center z-50 bg-black/70" @click.self="openParkingModal = false">
+    <div class="bg-cream p-3 sm:p-4 rounded-lg max-w-2xl w-full mx-4 relative border-2 border-gold shadow-gold-glow">
+      <button 
+        @click="openParkingModal = false"
+        class="absolute top-2 right-2 text-burgundy hover:text-gold transition-colors duration-200"
+        aria-label="Close modal"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      
+      <h3 class="text-lg sm:text-xl font-secondary text-burgundy text-center mb-3 islamic-border pb-2">Parking Information</h3>
+      
+      <div class="flex items-center justify-center">
+        <img src="/img/parking.png" alt="Parking Map" class="max-w-full h-auto rounded-md max-h-[70vh] object-contain" />
+      </div>
+      
+      <div class="mt-3 text-center">
+        <button 
+          @click="openParkingModal = false"
+          class="px-4 py-1.5 bg-burgundy text-beige rounded-full text-sm transition-colors hover:bg-gold hover:text-burgundy border border-gold/30"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
-import ParkingModal from './ParkingModal.vue';
 import CornerImage from '~/components/CornerImage.vue';
 
 const openParkingModal = ref(false);

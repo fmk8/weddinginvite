@@ -3,27 +3,27 @@
     <!-- Hero Section with Names -->
     <section 
       v-motion="{ initial: { opacity: 0 }, enter: { opacity: 1, transition: { duration: 1200 } } }" 
-      class="py-16 md:py-24 bg-cream/90 rounded-xl shadow-elegant border-2 border-gold/60 mx-auto max-w-4xl mt-8 mb-10 text-center relative overflow-hidden"
+      class="py-10 sm:py-16 md:py-24 bg-cream/90 rounded-lg sm:rounded-xl shadow-elegant border-2 border-gold/60 mx-auto max-w-4xl mt-4 sm:mt-8 mb-6 sm:mb-10 text-center relative overflow-hidden px-3 sm:px-4"
     >
       <!-- Ornate corner elements -->
-      <div class="absolute top-0 left-0 w-16 h-16 opacity-20" v-motion="{ initial: { opacity: 0, scale: 0.7 }, enter: { opacity: 0.2, scale: 1, transition: { duration: 800 } } }">
-        <img src="/img/corner-ornament.png" alt="" class="w-full h-full" />
+      <div class="absolute top-0 left-0 w-32 h-32 opacity-1" v-motion="{ initial: { opacity: 0, scale: 0.7 }, enter: { opacity: 1, scale: 1, transition: { duration: 800 } } }">
+        <CornerImage :rotation="90" />
       </div>
       
-      <div class="absolute top-0 right-0 w-16 h-16 opacity-20" v-motion="{ initial: { opacity: 0, scale: 0.7 }, enter: { opacity: 0.2, scale: 1, transition: { duration: 800 } } }">
-        <img src="/img/corner-ornament.png" alt="" class="w-full h-full transform rotate-90" />
+      <div class="absolute top-0 right-0 w-32 h-32 opacity-1" v-motion="{ initial: { opacity: 0, scale: 0.7 }, enter: { opacity: 1, scale: 1, transition: { duration: 800 } } }">
+        <CornerImage :rotation="180" />
       </div>
       
-      <div class="absolute bottom-0 right-0 w-16 h-16 opacity-20" v-motion="{ initial: { opacity: 0, scale: 0.7 }, enter: { opacity: 0.2, scale: 1, transition: { duration: 800 } } }">
-        <img src="/img/corner-ornament.png" alt="" class="w-full h-full transform rotate-180" />
+      <div class="absolute bottom-0 right-0 w-32 h-32 opacity-1" v-motion="{ initial: { opacity: 0, scale: 0.7 }, enter: { opacity: 1, scale: 1, transition: { duration: 800 } } }">
+        <CornerImage :rotation="-90" />
       </div>
       
-      <div class="absolute bottom-0 left-0 w-16 h-16 opacity-20" v-motion="{ initial: { opacity: 0, scale: 0.7 }, enter: { opacity: 0.2, scale: 1, transition: { duration: 800 } } }">
-        <img src="/img/corner-ornament.png" alt="" class="w-full h-full transform rotate-270" />
+      <div class="absolute bottom-0 left-0 w-32 h-32 opacity-1" v-motion="{ initial: { opacity: 0, scale: 0.7 }, enter: { opacity: 1, scale: 1, transition: { duration: 800 } } }">
+        <CornerImage :rotation="0" />
       </div>
       
       <h1 
-        class="text-xl md:text-2xl text-burgundy font-secondary mb-6 tracking-widest"
+        class="text-lg sm:text-xl md:text-2xl text-burgundy font-secondary mb-4 sm:mb-6 tracking-widest text-shadow-burgundy enhanced-text"
         v-motion="{ initial: { opacity: 0, y: -10 }, enter: { opacity: 1, y: 0, transition: { delay: 300, duration: 700 } } }"
       >
         Together with their families
@@ -31,23 +31,30 @@
       
       <div 
         v-motion="{ initial: { opacity: 0, scale: 0.9 }, enter: { opacity: 1, scale: 1, transition: { delay: 500, duration: 900 } } }" 
-        class="flex flex-col justify-center items-center gap-3 mb-5"
+        class="flex flex-col justify-center items-center gap-2 sm:gap-3 mb-2 sm:mb-3"
       >
-        <span class="text-4xl md:text-7xl font-decorative text-gold leading-tight">Fawad Mohyuddin</span>
-        <div class="text-burgundy font-secondary text-sm md:text-base tracking-wide mb-2">Son of Tahira Jabeen Mohyuddin & late Ghulam Mohyuddin</div>
+        <span class="text-3xl sm:text-4xl md:text-7xl font-decorative text-gold leading-tight px-2 text-shadow-gold">Fawad Mohyuddin</span>
+        <div class="text-burgundy font-secondary text-xs sm:text-sm md:text-base tracking-wide mb-1 sm:mb-2 px-4 enhanced-text">Son of Tahira Jabeen Mohyuddin & late Ghulam Mohyuddin</div>
         
-        <span class="text-3xl md:text-5xl font-secondary text-burgundy">&</span>
+        <span class="text-2xl sm:text-3xl md:text-5xl font-secondary text-burgundy">&</span>
         
-        <span class="text-4xl md:text-7xl font-decorative text-gold leading-tight mt-2">Nimrah Khan</span>
-        <div class="text-burgundy font-secondary text-sm md:text-base tracking-wide">Daughter of Muhammad Tahir & Roohi Tahir</div>
+        <span class="text-3xl sm:text-4xl md:text-7xl font-decorative text-gold leading-tight mt-1 sm:mt-2 px-2 text-shadow-gold">Nimrah Khan</span>
+        <div class="text-burgundy font-secondary text-xs sm:text-sm md:text-base tracking-wide px-4 enhanced-text">Daughter of Muhammad Tahir & Roohi Tahir</div>
       </div>
-      
       <div 
-        class="text-xl md:text-2xl text-burgundy font-secondary mb-8 tracking-wide"
+        class="text-base sm:text-xl md:text-2xl text-burgundy font-secondary mb-2 mt-0 tracking-wide px-2 sm:px-4 enhanced-text"
         v-motion="{ initial: { opacity: 0 }, enter: { opacity: 1, transition: { delay: 700, duration: 700 } } }"
       >
         Request the pleasure of your company at their wedding reception
       </div>
+      
+      <!-- Separator image -->
+      <div class="w-64 h-4 mx-auto mb-6">
+        <img src="/img/seperator.png" alt="" class="w-full h-full" />
+      </div>
+      
+      <!-- Space for additional content if needed -->
+      <div class="h-4"></div>
       
       <!-- Countdown Timer Component -->
       <div v-motion="{ initial: { opacity: 0, y: 20 }, enter: { opacity: 1, y: 0, transition: { delay: 900, duration: 700 } } }">
@@ -56,24 +63,21 @@
       
       <div 
         v-motion="{ initial: { opacity: 0, y: 12 }, enter: { opacity: 1, y: 0, transition: { delay: 1100, duration: 600 } } }" 
-        class="mt-8"
+        class="mt-5 sm:mt-8"
       >
         <a 
           href="#rsvp" 
-          class="inline-block px-10 py-3 bg-burgundy text-beige font-secondary text-lg rounded-full shadow-elegant hover:bg-gold hover:text-burgundy transition-all duration-300 border border-gold/40 hover:shadow-gold-glow"
+          class="inline-block px-8 sm:px-10 py-2 sm:py-3 bg-burgundy text-beige font-secondary text-base sm:text-lg rounded-full shadow-elegant hover:bg-gold hover:text-burgundy transition-all duration-300 border border-gold/40 hover:shadow-gold-glow relative overflow-hidden group"
           @click.prevent="scrollToRsvp"
         >
-          RSVP Now
+          <span class="relative z-10">RSVP Now</span>
+          <span class="absolute inset-0 bg-gradient-to-r from-gold/0 via-gold/20 to-gold/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
         </a>
       </div>
     </section>
 
     <!-- Decorative Divider -->
-    <div class="w-full flex items-center justify-center my-10">
-      <div class="w-72 h-8 opacity-40" v-motion="{ initial: { opacity: 0, scale: 0.9 }, enter: { opacity: 0.4, scale: 1, transition: { duration: 800 } } }">
-        <img src="/img/ornate-divider.png" alt="" class="w-full h-full" />
-      </div>
-    </div>
+    
 
     <!-- Wedding Information Section Component -->
     <div v-scroll-animate>
@@ -82,8 +86,8 @@
     
     <!-- Decorative Divider -->
     <div class="w-full flex items-center justify-center my-10">
-      <div class="w-72 h-8 opacity-40" v-motion="{ initial: { opacity: 0, scale: 0.9 }, enter: { opacity: 0.4, scale: 1, transition: { duration: 800 } } }">
-        <img src="/img/ornate-divider.png" alt="" class="w-full h-full" />
+      <div class="w-96 h-4 mb-4 mx-auto" v-motion="{ initial: { opacity: 1, scale: 0.9 }, enter: { opacity: 1, scale: 1, transition: { duration: 800 } } }">
+        <img src="/img/seperator.png" alt="" class="w-full h-full" />
       </div>
     </div>
     
@@ -93,44 +97,20 @@
         initial: { opacity: 0, y: 60 }, 
         visible: { opacity: 1, y: 0, transition: { duration: 1000, damping: 20 } } 
       }"
-      class="my-10"
+      class="my-6 sm:my-10"
     >
       <RsvpForm />
     </div>
     
-    <!-- Back to Top Button -->
-    <div 
-      v-show="showBackToTop" 
-      class="fixed bottom-8 right-8 z-50 transition-all duration-500"
-      :class="{ 'opacity-0 translate-y-10': !showBackToTop, 'opacity-100 translate-y-0': showBackToTop }"
-    >
-      <button 
-        @click="scrollToTop" 
-        class="w-14 h-14 rounded-full bg-burgundy text-gold flex items-center justify-center shadow-elegant hover:bg-gold hover:text-burgundy transition-all duration-300 border-2 border-gold/50 hover:shadow-gold-glow"
-        aria-label="Back to top"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-        </svg>
-      </button>
-    </div>
+
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
 import CountdownTimer from '~/components/CountdownTimer.vue';
 import InfoCards from '~/components/InfoCards.vue';
 import RsvpForm from '~/components/RsvpForm.vue';
-
-// Back to top button visibility
-const showBackToTop = ref(false);
-
-// Scroll event handler
-const handleScroll = () => {
-  // Show back to top button when scrolled down more than 500px
-  showBackToTop.value = window.scrollY > 500;
-};
+import CornerImage from '~/components/CornerImage.vue';
 
 // Scroll to RSVP section
 const scrollToRsvp = () => {
@@ -139,24 +119,6 @@ const scrollToRsvp = () => {
     rsvpElement.scrollIntoView({ behavior: 'smooth' });
   }
 };
-
-// Scroll to top function
-const scrollToTop = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-};
-
-onMounted(() => {
-  // Add scroll event listener
-  window.addEventListener('scroll', handleScroll);
-});
-
-onUnmounted(() => {
-  // Remove scroll event listener
-  window.removeEventListener('scroll', handleScroll);
-});
 </script>
 
 <style>

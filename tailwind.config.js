@@ -9,6 +9,15 @@ export default {
     "./nuxt.config.{js,ts}"
   ],
   theme: {
+    screens: {
+      'xs': '320px',
+      // Default Tailwind breakpoints
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    },
     extend: {
       colors: {
         beige: '#f7f3e8',

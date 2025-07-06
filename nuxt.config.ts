@@ -30,7 +30,9 @@ export default defineNuxtConfig({
     }
   },
   css: [
-    '~/assets/css/main.css'
+    '~/assets/css/main.css',
+    '~/assets/css/fix-opacity.css',
+    '~/assets/css/mobile-typography.css'
   ],
   
   runtimeConfig: {

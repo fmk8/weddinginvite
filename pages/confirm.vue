@@ -4,7 +4,6 @@
       <h1 class="text-3xl text-burgundy font-secondary mb-2">Thank You!</h1>
       <div class="text-5xl text-gold my-4">✓</div>
       <p class="text-xl mb-6">Your RSVP has been submitted successfully.</p>
-      <p class="mb-4">We've sent a confirmation email to the address you provided.</p>
       <p class="mb-8">We're looking forward to celebrating with you on our special day!</p>
       
       <NuxtLink to="/" class="inline-block px-6 py-3 bg-burgundy text-beige font-secondary rounded-full shadow-md hover:bg-gold hover:text-black transition">

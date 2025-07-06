@@ -1,0 +1,20 @@
+/* Fix for opacity issues with images and text */
+
+/* Make corner images fully visible */
+[class*="absolute"] img[src*="corner.png"],
+div:has(> CornerImage) {
+  opacity: 1 !important;
+}
+
+/* Make separator images fully visible */
+[class*="w-"] img[src*="seperator.png"] {
+  opacity: 1 !important;
+}
+
+/* Override any opacity classes for these specific elements */
+div.opacity-20 img[src*="corner.png"],
+div.opacity-30 img[src*="corner.png"],
+div.opacity-40 img[src*="corner.png"],
+div.opacity-70 img[src*="seperator.png"] {
+  opacity: 1 !important;
+}
