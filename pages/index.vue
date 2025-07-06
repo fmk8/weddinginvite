@@ -3,7 +3,7 @@
     <!-- Hero Section with Names -->
     <section 
       v-motion="{ initial: { opacity: 0 }, enter: { opacity: 1, transition: { duration: 1200 } } }" 
-      class="py-10 sm:py-16 md:py-24 bg-cream/90 rounded-lg sm:rounded-xl shadow-elegant border-2 border-gold/60 mx-auto max-w-4xl mt-4 sm:mt-8 mb-6 sm:mb-10 text-center relative overflow-hidden px-3 sm:px-4"
+      class="py-10 sm:py-16 md:py-24 bg-cream/90 rounded-lg sm:rounded-xl shadow-elegant border-2 border-gold/60 mx-auto max-w-4xl mt-4 sm:mt-8 mb-3 sm:mb-3 text-center relative overflow-hidden px-3 sm:px-4"
     >
       <!-- Ornate corner elements -->
       <div class="absolute top-0 left-0 w-32 h-32 opacity-1" v-motion="{ initial: { opacity: 0, scale: 0.7 }, enter: { opacity: 1, scale: 1, transition: { duration: 800 } } }">
@@ -33,12 +33,12 @@
         v-motion="{ initial: { opacity: 0, scale: 0.9 }, enter: { opacity: 1, scale: 1, transition: { delay: 500, duration: 900 } } }" 
         class="flex flex-col justify-center items-center gap-2 sm:gap-3 mb-2 sm:mb-3"
       >
-        <span class="font-decorative text-gold leading-tight px-2 text-shadow-gold" style="font-size: 4rem !important; line-height: 1.1;">Fawad Mohyuddin</span>
+        <span class="font-decorative text-gold leading-tight px-2 text-shadow-gold" style="font-size: 3.65rem  !important; line-height: 1.1;">Fawad Mohyuddin</span>
         <div class="text-burgundy font-secondary text-xs sm:text-sm md:text-base tracking-wide mb-1 sm:mb-2 px-4 enhanced-text">Son of Tahira Jabeen Mohyuddin & late Ghulam Mohyuddin</div>
         
         <span class="text-2xl sm:text-3xl md:text-5xl font-secondary text-burgundy">&</span>
         
-        <span class="font-decorative text-gold leading-tight mt-1 sm:mt-2 px-2 text-shadow-gold" style="font-size: 4rem !important; line-height: 1.1;">Nimrah Khan</span>
+        <span class="font-decorative text-gold leading-tight mt-1 sm:mt-2 px-2 text-shadow-gold" style="font-size: 3.65rem !important; line-height: 1.1;">Nimrah Khan</span>
         <div class="text-burgundy font-secondary text-xs sm:text-sm md:text-base tracking-wide px-4 enhanced-text">Daughter of Muhammad Tahir & Roohi Tahir</div>
       </div>
       <div 
