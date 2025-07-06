@@ -80,9 +80,11 @@
     
 
     <!-- Wedding Information Section Component -->
-    <div v-scroll-animate>
-      <InfoCards />
-    </div>
+    <ClientOnly>
+      <div v-scroll-animate>
+        <InfoCards />
+      </div>
+    </ClientOnly>
     
     <!-- Decorative Divider -->
     <div class="w-full flex items-center justify-center my-10">
@@ -92,15 +94,17 @@
     </div>
     
     <!-- RSVP Section -->
-    <div 
-      v-scroll-animate="{ 
-        initial: { opacity: 0, y: 60 }, 
-        visible: { opacity: 1, y: 0, transition: { duration: 1000, damping: 20 } } 
-      }"
-      class="my-6 sm:my-10"
-    >
-      <RsvpForm />
-    </div>
+    <ClientOnly>
+      <div 
+        v-scroll-animate="{ 
+          initial: { opacity: 0, y: 60 }, 
+          visible: { opacity: 1, y: 0, transition: { duration: 1000, damping: 20 } } 
+        }"
+        class="my-6 sm:my-10"
+      >
+        <RsvpForm />
+      </div>
+    </ClientOnly>
     
 
   </div>

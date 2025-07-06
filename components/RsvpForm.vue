@@ -168,44 +168,46 @@
       </div>
       
       <!-- Attendance -->
-      <div class="mb-8" v-scroll-animate="{ initial: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0, transition: { duration: 1000, ease: 'easeOut', delay: 200 } } }">
-        <h3 class="text-xl text-burgundy font-secondary mb-4 pb-2 border-b border-gold/50 tracking-wide islamic-border text-shadow-burgundy">Attendance</h3>
-        
-        <div class="mb-6">
-          <label class="block text-burgundy font-medium mb-3 opacity-80 enhanced-text">Will you be attending?*</label>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 mb-6">
-            <label for="attending-yes" class="flex items-center group cursor-pointer">
-              <div class="relative">
-                <input 
-                  type="radio" 
-                  id="attending-yes" 
-                  value="yes" 
-                  v-model="form.attending"
-                  class="sr-only"
-                  required
-                >
-                <div class="w-6 h-6 border-2 border-gold/50 rounded-full flex items-center justify-center transition-all group-hover:border-burgundy">
-                  <div class="w-3 h-3 rounded-full bg-burgundy scale-0 transition-transform duration-200" :class="{'scale-100': form.attending === 'yes'}"></div>
+      <ClientOnly>
+        <div class="mb-8" v-scroll-animate="{ initial: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0, transition: { duration: 1000, ease: 'easeOut', delay: 200 } } }">
+          <h3 class="text-xl text-burgundy font-secondary mb-4 pb-2 border-b border-gold/50 tracking-wide islamic-border text-shadow-burgundy">Attendance</h3>
+          
+          <div class="mb-6">
+            <label class="block text-burgundy font-medium mb-3 opacity-80 enhanced-text">Will you be attending?*</label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 mb-6">
+              <label for="attending-yes" class="flex items-center group cursor-pointer">
+                <div class="relative">
+                  <input 
+                    type="radio" 
+                    id="attending-yes" 
+                    value="yes" 
+                    v-model="form.attending"
+                    class="sr-only"
+                    required
+                  >
+                  <div class="w-6 h-6 border-2 border-gold/50 rounded-full flex items-center justify-center transition-all group-hover:border-burgundy">
+                    <div class="w-3 h-3 rounded-full bg-burgundy scale-0 transition-transform duration-200" :class="{'scale-100': form.attending === 'yes'}"></div>
+                  </div>
                 </div>
-              </div>
-              <span class="ml-3 text-burgundy group-hover:text-burgundy/90 transition-colors enhanced-text">Yes, I'll be there!</span>
-            </label>
-            
-            <label for="attending-no" class="flex items-center group cursor-pointer">
-              <div class="relative">
-                <input 
-                  type="radio" 
-                  id="attending-no" 
-                  value="no" 
-                  v-model="form.attending"
-                  class="sr-only"
-                >
-                <div class="w-6 h-6 border-2 border-gold/50 rounded-full flex items-center justify-center transition-all group-hover:border-burgundy">
-                  <div class="w-3 h-3 rounded-full bg-burgundy scale-0 transition-transform duration-200" :class="{'scale-100': form.attending === 'no'}"></div>
+                <span class="ml-3 text-burgundy group-hover:text-burgundy/90 transition-colors enhanced-text">Yes, I'll be there!</span>
+              </label>
+              
+              <label for="attending-no" class="flex items-center group cursor-pointer">
+                <div class="relative">
+                  <input 
+                    type="radio" 
+                    id="attending-no" 
+                    value="no" 
+                    v-model="form.attending"
+                    class="sr-only"
+                  >
+                  <div class="w-6 h-6 border-2 border-gold/50 rounded-full flex items-center justify-center transition-all group-hover:border-burgundy">
+                    <div class="w-3 h-3 rounded-full bg-burgundy scale-0 transition-transform duration-200" :class="{'scale-100': form.attending === 'no'}"></div>
+                  </div>
                 </div>
-              </div>
-              <span class="ml-3 text-burgundy group-hover:text-burgundy/90 transition-colors enhanced-text">Regretfully decline</span>
-            </label>
+                <span class="ml-3 text-burgundy group-hover:text-burgundy/90 transition-colors enhanced-text">Regretfully decline</span>
+              </label>
+            </div>
           </div>
         </div>
         
@@ -270,26 +272,28 @@
             <!-- Removed duplicate animated line, now using the border-b-2 and focus:border-burgundy for the highlight effect -->
           </div>
         </div>
-      </div>
+      </ClientOnly>
       
       <!-- Dietary Requirements -->
-      <div v-if="form.attending === 'yes'" class="mb-8" v-scroll-animate="{ initial: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0, transition: { duration: 1000, ease: 'easeOut', delay: 300 } } }">
-        <h3 class="text-xl text-burgundy font-secondary mb-4 pb-2 border-b border-gold/50 tracking-wide islamic-border text-shadow-burgundy">Dietary Requirements</h3>
+      <ClientOnly>
+        <div v-if="form.attending === 'yes'" class="mb-8" v-scroll-animate="{ initial: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0, transition: { duration: 1000, ease: 'easeOut', delay: 300 } } }">
+          <h3 class="text-xl text-burgundy font-secondary mb-4 pb-2 border-b border-gold/50 tracking-wide islamic-border text-shadow-burgundy">Dietary Requirements</h3>
         
-        <div class="mb-6">
-          <label for="allergies" class="block text-burgundy font-medium mb-2 opacity-80">Allergies or Special Dietary Requirements</label>
-          <div class="relative group">
-            <textarea
-              id="allergies"
-              v-model="form.allergies"
-              rows="2"
-              class="w-full p-2 sm:p-3 border-0 border-b-2 border-gold/40 bg-cream/30 focus:outline-none focus:border-burgundy focus:bg-cream/50 rounded-t-md shadow-sm transition-all duration-300 placeholder:text-burgundy/40 text-burgundy resize-none"
-              placeholder="Please let us know of any allergies or dietary restrictions..."
-            ></textarea>
-            <!-- Using only the border-b-2 and focus:border-burgundy for consistent styling -->
+          <div class="mb-6">
+            <label for="allergies" class="block text-burgundy font-medium mb-2 opacity-80">Allergies or Special Dietary Requirements</label>
+            <div class="relative group">
+              <textarea
+                id="allergies"
+                v-model="form.allergies"
+                rows="2"
+                class="w-full p-2 sm:p-3 border-0 border-b-2 border-gold/40 bg-cream/30 focus:outline-none focus:border-burgundy focus:bg-cream/50 rounded-t-md shadow-sm transition-all duration-300 placeholder:text-burgundy/40 text-burgundy resize-none"
+                placeholder="Please let us know of any allergies or dietary restrictions..."
+              ></textarea>
+              <!-- Using only the border-b-2 and focus:border-burgundy for consistent styling -->
+            </div>
           </div>
         </div>
-      </div>
+      </ClientOnly>
       
       <div class="flex justify-center mt-6 sm:mt-8">
         <button 
