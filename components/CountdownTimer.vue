@@ -1,6 +1,6 @@
 <template>
-  <div class="countdown-container flex flex-col items-center mb-3 sm:mb-4 py-2 sm:py-3">
-    <div class="text-base sm:text-lg md:text-xl text-burgundy font-secondary mb-1 tracking-wide enhanced-text" v-motion="{ initial: { opacity: 0 }, enter: { opacity: 1, transition: { duration: 600 } } }">
+  <div class="countdown-container flex flex-col items-center mb-3 sm:mb-4">
+    <div class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gold font-decorative mb-1 tracking-wider px-2 text-center text-shadow-gold" v-motion="{ initial: { opacity: 0 }, enter: { opacity: 1, transition: { duration: 600 } } }">
       Join us on
     </div>
     <div class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gold font-decorative mb-3 sm:mb-4 md:mb-6 tracking-wider px-2 text-center" v-motion="{ initial: { opacity: 0 }, enter: { opacity: 1, transition: { duration: 600, delay: 150 } } }">

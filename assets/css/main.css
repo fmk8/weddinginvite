@@ -67,6 +67,15 @@ html, body {
   background: linear-gradient(to right, rgba(198, 169, 100, 0), rgba(198, 169, 100, 0.7), rgba(198, 169, 100, 0));
 }
 
+/* Extra large name styling */
+.big-name {
+  font-size: 5rem !important;
+  line-height: 1.1;
+  transform: scale(1.05);
+  text-shadow: 0 3px 5px rgba(198, 169, 100, 0.5);
+  padding: 0.5rem 0;
+}
+
 /* Prayer quote styling */
 .prayer-quote {
   font-style: italic;

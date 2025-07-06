@@ -33,12 +33,12 @@
         v-motion="{ initial: { opacity: 0, scale: 0.9 }, enter: { opacity: 1, scale: 1, transition: { delay: 500, duration: 900 } } }" 
         class="flex flex-col justify-center items-center gap-2 sm:gap-3 mb-2 sm:mb-3"
       >
-        <span class="text-3xl sm:text-4xl md:text-7xl font-decorative text-gold leading-tight px-2 text-shadow-gold">Fawad Mohyuddin</span>
+        <span class="font-decorative text-gold leading-tight px-2 text-shadow-gold" style="font-size: 4rem !important; line-height: 1.1;">Fawad Mohyuddin</span>
         <div class="text-burgundy font-secondary text-xs sm:text-sm md:text-base tracking-wide mb-1 sm:mb-2 px-4 enhanced-text">Son of Tahira Jabeen Mohyuddin & late Ghulam Mohyuddin</div>
         
         <span class="text-2xl sm:text-3xl md:text-5xl font-secondary text-burgundy">&</span>
         
-        <span class="text-3xl sm:text-4xl md:text-7xl font-decorative text-gold leading-tight mt-1 sm:mt-2 px-2 text-shadow-gold">Nimrah Khan</span>
+        <span class="font-decorative text-gold leading-tight mt-1 sm:mt-2 px-2 text-shadow-gold" style="font-size: 4rem !important; line-height: 1.1;">Nimrah Khan</span>
         <div class="text-burgundy font-secondary text-xs sm:text-sm md:text-base tracking-wide px-4 enhanced-text">Daughter of Muhammad Tahir & Roohi Tahir</div>
       </div>
       <div 
@@ -52,9 +52,6 @@
       <div class="w-64 h-4 mx-auto mb-6">
         <img src="/img/seperator.png" alt="" class="w-full h-full" />
       </div>
-      
-      <!-- Space for additional content if needed -->
-      <div class="h-4"></div>
       
       <!-- Countdown Timer Component -->
       <div v-motion="{ initial: { opacity: 0, y: 20 }, enter: { opacity: 1, y: 0, transition: { delay: 900, duration: 700 } } }">

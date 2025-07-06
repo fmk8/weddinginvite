@@ -174,38 +174,34 @@
           
           <div class="mb-6">
             <label class="block text-burgundy font-medium mb-3 opacity-80 enhanced-text">Will you be attending?*</label>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 mb-6">
-              <label for="attending-yes" class="flex items-center group cursor-pointer">
-                <div class="relative">
-                  <input 
-                    type="radio" 
-                    id="attending-yes" 
-                    value="yes" 
-                    v-model="form.attending"
-                    class="sr-only"
-                    required
-                  >
-                  <div class="w-6 h-6 border-2 border-gold/50 rounded-full flex items-center justify-center transition-all group-hover:border-burgundy">
-                    <div class="w-3 h-3 rounded-full bg-burgundy scale-0 transition-transform duration-200" :class="{'scale-100': form.attending === 'yes'}"></div>
-                  </div>
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-6">
+              <label for="attending-yes" class="inline-flex items-center cursor-pointer whitespace-nowrap">
+                <input 
+                  type="radio" 
+                  id="attending-yes" 
+                  value="yes" 
+                  v-model="form.attending"
+                  class="sr-only"
+                  required
+                >
+                <div class="w-5 h-5 border-2 border-gold/60 rounded-full inline-flex items-center justify-center transition-all">
+                  <div class="w-2.5 h-2.5 rounded-full bg-burgundy scale-0 transition-transform duration-200" :class="{'scale-100': form.attending === 'yes'}"></div>
                 </div>
-                <span class="ml-3 text-burgundy group-hover:text-burgundy/90 transition-colors enhanced-text">Yes, I'll be there!</span>
+                <span class="ml-2 text-burgundy enhanced-text">Yes, I'll be there!</span>
               </label>
               
-              <label for="attending-no" class="flex items-center group cursor-pointer">
-                <div class="relative">
-                  <input 
-                    type="radio" 
-                    id="attending-no" 
-                    value="no" 
-                    v-model="form.attending"
-                    class="sr-only"
-                  >
-                  <div class="w-6 h-6 border-2 border-gold/50 rounded-full flex items-center justify-center transition-all group-hover:border-burgundy">
-                    <div class="w-3 h-3 rounded-full bg-burgundy scale-0 transition-transform duration-200" :class="{'scale-100': form.attending === 'no'}"></div>
-                  </div>
+              <label for="attending-no" class="inline-flex items-center cursor-pointer whitespace-nowrap">
+                <input 
+                  type="radio" 
+                  id="attending-no" 
+                  value="no" 
+                  v-model="form.attending"
+                  class="sr-only"
+                >
+                <div class="w-5 h-5 border-2 border-gold/60 rounded-full inline-flex items-center justify-center transition-all">
+                  <div class="w-2.5 h-2.5 rounded-full bg-burgundy scale-0 transition-transform duration-200" :class="{'scale-100': form.attending === 'no'}"></div>
                 </div>
-                <span class="ml-3 text-burgundy group-hover:text-burgundy/90 transition-colors enhanced-text">Regretfully decline</span>
+                <span class="ml-2 text-burgundy enhanced-text">Regretfully decline</span>
               </label>
             </div>
           </div>
